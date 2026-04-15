@@ -46,7 +46,7 @@
                     height="44">
             </a>
 
-            <!-- HAMBURGER -->
+            <!-- HAMBURGER MENU -->
             <button class="navbar-toggler custom-toggler" type="button" aria-label="Open navigation menu"
                 id="mobileMenuBtn">
                 <span class="bi bi-list" aria-hidden="true"></span>
@@ -515,22 +515,18 @@
             mobileMenuBtn.focus();
             document.body.style.overflow = '';
         }
-
         mobileMenuBtn.addEventListener('click', openMenu);
         mobileCloseBtn.addEventListener('click', closeMenu);
-
         // Close on Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && mobileOverlay.classList.contains('open')) {
                 closeMenu();
             }
         });
-
         // Close overlay on link click
         mobileOverlay.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMenu);
         });
-
         // Events tab switching
         const eventsTabs = document.querySelectorAll('.events-tab');
         eventsTabs.forEach(tab => {
