@@ -4,22 +4,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Active Life Centre Homepage</title>
+    <title>Contact Us — Active Life Centre</title>
 
-        <!-- Rest -->
-        <link rel="stylesheet" href="css/reset.css">
+    <!-- Reset -->
+    <link rel="stylesheet" href="css/reset.css">
 
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Barlow+Condensed:wght@700;800&display=swap"
+        rel="stylesheet">
 
-        <!-- Animate.css (CSS library) -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <!-- ================= SKIP LINK ================= -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg custom-navbar" role="navigation" aria-label="Main navigation">
+        <div class="container-xl">
+
+            <a class="navbar-brand" href="index.html" aria-label="Active Life Centre home">
+                <img src="images/logo-active-life-centre-transparent-white.png" alt="Active Life Centre logo"
+                    height="44">
+            </a>
+
+            <!-- HAMBURGER MENU -->
+            <button class="navbar-toggler custom-toggler" type="button" aria-label="Open navigation menu"
+                id="mobileMenuBtn">
+                <span class="bi bi-list" aria-hidden="true"></span>
+            </button>
+
+            <!-- DESKTOP NAV -->
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navMenu">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-none d-lg-flex align-items-center search-wrap">
+                <label for="site-search" class="visually-hidden">Search programs</label>
+                <i class="bi bi-search search-icon" aria-hidden="true"></i>
+                <input class="search" id="site-search" type="text" placeholder="Search programs..."
+                    aria-label="Search programs">
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-label="Navigation menu">
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation menu">
+            <span class="bi bi-x" aria-hidden="true"></span>
+        </button>
+        <nav class="mobile-menu-panel" aria-label="Mobile navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main id="main-content">
+
+        <!-- ================= PAGE HERO ================= -->
+        <section class="page-hero-section" aria-label="Contact hero">
+            <div class="container-xl py-4 py-lg-5">
+                <div class="page-hero-card page-hero-card--contact animate__animated animate__fadeIn">
+                    <nav aria-label="Breadcrumb" class="mb-3">
+                        <ol class="breadcrumb page-breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">HOME</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">CONTACT</li>
+                        </ol>
+                    </nav>
+                    <h1 class="page-hero-title animate__animated animate__fadeInUp">Get in Touch</h1>
+                    <p class="page-hero-desc animate__animated animate__fadeInUp animate__delay-1s">Have questions about
+                        our programs, facilities, or memberships? Our team<br class="d-none d-md-block"> is here to help
+                        you start your active journey.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT CONTENT ================= -->
+        <section class="contact-section" aria-label="Contact information and form">
+            <div class="container-xl py-5">
+                <div class="row g-4">
+
+                    <!-- Left: Contact Info + Hours -->
+                    <div class="col-lg-4">
+
+                        <!-- Contact Information Card -->
+                        <div class="contact-info-card animate__animated animate__fadeInLeft mb-4">
+                            <h2 class="contact-card-title">Contact Information</h2>
+                            <ul class="contact-info-list">
+                                <li class="contact-info-item">
+                                    <span class="contact-info-icon contact-info-icon--location" aria-hidden="true">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </span>
+                                    <div>
+                                        <strong>Location</strong>
+                                        <p>123 Wellness Blvd,<br>Health City, HC 56789</p>
+                                    </div>
+                                </li>
+                                <li class="contact-info-item">
+                                    <span class="contact-info-icon contact-info-icon--phone" aria-hidden="true">
+                                        <i class="bi bi-telephone-fill"></i>
+                                    </span>
+                                    <div>
+                                        <strong>Phone</strong>
+                                        <p><a href="tel:5551234567">(555) 123-4567</a></p>
+                                        <p class="contact-info-note">Mon-Fri, 6am – 10pm</p>
+                                    </div>
+                                </li>
+                                <li class="contact-info-item">
+                                    <span class="contact-info-icon contact-info-icon--email" aria-hidden="true">
+                                        <i class="bi bi-envelope-fill"></i>
+                                    </span>
+                                    <div>
+                                        <strong>Email</strong>
+                                        <p><a href="mailto:hello@activelifecentre.com">hello@activelifecentre.com</a>
+                                        </p>
+                                        <p class="contact-info-note">We reply within 24 hours</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Operating Hours Card -->
+                        <div class="contact-info-card animate__animated animate__fadeInLeft animate__delay-1s">
+                            <h2 class="contact-card-title">Operating Hours</h2>
+                            <table class="hours-table" aria-label="Operating hours">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Monday – Friday</th>
+                                        <td>6:00 AM – 10:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Saturday</th>
+                                        <td>8:00 AM – 8:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Sunday</th>
+                                        <td>8:00 AM – 6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Public Holidays</th>
+                                        <td>10:00 AM – 4:00 PM</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Contact Form -->
+                    <div class="col-lg-8">
+                        <div class="contact-form-card animate__animated animate__fadeInRight">
+                            <h2 class="contact-card-title mb-1">Send us a Message</h2>
+                            <p class="contact-form-intro">Fill out the form below and our team will get back to you as
+                                soon as possible.</p>
+
+                            <div class="contact-form" id="contactForm" novalidate>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="contact-label">First Name</label>
+                                        <input type="text" id="firstName" class="contact-input" placeholder="John"
+                                            autocomplete="given-name" required aria-required="true">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="contact-label">Last Name</label>
+                                        <input type="text" id="lastName" class="contact-input" placeholder="Doe"
+                                            autocomplete="family-name" required aria-required="true">
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label for="email" class="contact-label">Email Address</label>
+                                        <input type="email" id="email" class="contact-input"
+                                            placeholder="john@example.com" autocomplete="email" required
+                                            aria-required="true">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="contact-label">Phone Number <span
+                                                class="contact-label-optional">(Optional)</span></label>
+                                        <input type="tel" id="phone" class="contact-input" placeholder="(555) 000-0000"
+                                            autocomplete="tel">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="inquiryType" class="contact-label">Inquiry Type</label>
+                                    <select id="inquiryType" class="contact-input contact-select" required
+                                        aria-required="true">
+                                        <option value="general" selected>General Inquiry</option>
+                                        <option value="membership">Membership</option>
+                                        <option value="programs">Programs &amp; Facilities</option>
+                                        <option value="booking">Class Booking</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="message" class="contact-label">Message</label>
+                                    <textarea id="message" class="contact-input contact-textarea"
+                                        placeholder="How can we help you today?" rows="6" required
+                                        aria-required="true"></textarea>
+                                </div>
+
+                                <button type="button" class="btn btn-send-message" id="sendBtn"
+                                    onclick="handleSubmit()">
+                                    Send Message <i class="bi bi-send-fill ms-2" aria-hidden="true"></i>
+                                </button>
+
+                                <!-- Success message (hidden by default) -->
+                                <div class="contact-success" id="successMsg" role="alert" aria-live="polite"
+                                    style="display:none;">
+                                    <i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>
+                                    Thank you! Your message has been sent. We'll be in touch within 24 hours.
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= IMMEDIATE ASSISTANCE CTA ================= -->
+        <section class="cta-section" aria-label="Immediate assistance call to action">
+            <div class="container-xl py-4 py-lg-5">
+                <div class="cta-card cta-card--yellow">
+                    <div class="cta-text">
+                        <h2>Need Immediate Assistance?</h2>
+                        <p>Our front desk staff is available during operating hours to answer any urgent questions you
+                            might have.</p>
+                    </div>
+                    <a href="tel:5551234567" class="btn btn-cta-tour">
+                        <i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>Call Us Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container-xl py-5">
+
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-lightning-fill footer-logo-icon" aria-hidden="true"></i>
+                        <span class="footer-logo-text">Active Life</span>
+                    </div>
+                    <p class="footer-desc">Supporting our community's health and wellness since 1995. Your journey to a
+                        better life starts here.</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-heading">QUICK LINKS</h3>
+                    <ul class="footer-links" aria-label="Quick links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Facilities</a></li>
+                        <li><a href="#">Membership Plans</a></li>
+                        <li><a href="#">Trainer Profiles</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-heading">CONTACT US</h3>
+                    <ul class="footer-links" aria-label="Contact information">
+                        <li><i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>123 Wellness
+                            Blvd,<br>&nbsp;&nbsp;&nbsp;&nbsp;Health City, HC 56789</li>
+                        <li><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i><a href="tel:5551234567">(555)
+                                123-4567</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-heading">STAY UPDATED</h3>
+                    <p class="footer-desc mb-3">Subscribe for health tips and program updates.</p>
+                    <div class="footer-newsletter" role="form" aria-label="Newsletter signup">
+                        <label for="footer-email" class="visually-hidden">Your email address</label>
+                        <input type="email" id="footer-email" class="newsletter-input" placeholder="Your email"
+                            aria-label="Email address for newsletter">
+                        <button class="btn btn-newsletter" aria-label="Subscribe to newsletter">Join</button>
+                    </div>
+                    <div class="social-icons mt-4" aria-label="Social media links">
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-icon" aria-label="X (Twitter)"><i class="bi bi-twitter-x"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="footer-hr">
+
+            <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <p class="mb-0">© 2024 Active Life Centre. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Mobile menu open/close
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        function openMenu() {
+            mobileOverlay.classList.add('open');
+            mobileOverlay.setAttribute('aria-hidden', 'false');
+            mobileCloseBtn.focus();
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            mobileOverlay.classList.remove('open');
+            mobileOverlay.setAttribute('aria-hidden', 'true');
+            mobileMenuBtn.focus();
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMenu);
+        mobileCloseBtn.addEventListener('click', closeMenu);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileOverlay.classList.contains('open')) closeMenu();
+        });
+
+        mobileOverlay.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+
+        // Form submission handler
+        function handleSubmit() {
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!firstName || !lastName || !email || !message) {
+                // Simple inline validation feedback
+                [['firstName', firstName], ['lastName', lastName], ['email', email], ['message', message]].forEach(([id, val]) => {
+                    const el = document.getElementById(id);
+                    if (!val) {
+                        el.classList.add('contact-input--error');
+                    } else {
+                        el.classList.remove('contact-input--error');
+                    }
+                });
+                return;
+            }
+
+            // Clear errors
+            document.querySelectorAll('.contact-input--error').forEach(el => el.classList.remove('contact-input--error'));
+
+            // Show success
+            document.getElementById('sendBtn').style.display = 'none';
+            document.getElementById('successMsg').style.display = 'flex';
+        }
+    </script>
 
 </body>
 

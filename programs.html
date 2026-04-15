@@ -4,22 +4,430 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs | Active Life Centre Homepage</title>
+    <title>Programs & Facilities — Active Life Centre</title>
 
-        <!-- Rest -->
-        <link rel="stylesheet" href="css/reset.css">
+    <!-- Reset -->
+    <link rel="stylesheet" href="css/reset.css">
 
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Barlow+Condensed:wght@700;800&display=swap"
+        rel="stylesheet">
 
-        <!-- Animate.css (CSS library) -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <!-- ================= SKIP LINK ================= -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg custom-navbar" role="navigation" aria-label="Main navigation">
+        <div class="container-xl">
+
+            <a class="navbar-brand" href="index.html" aria-label="Active Life Centre home">
+                <img src="images/logo-active-life-centre-transparent-white.png" alt="Active Life Centre logo"
+                    height="44">
+            </a>
+
+            <!-- HAMBURGER MENU -->
+            <button class="navbar-toggler custom-toggler" type="button" aria-label="Open navigation menu"
+                id="mobileMenuBtn">
+                <span class="bi bi-list" aria-hidden="true"></span>
+            </button>
+
+            <!-- DESKTOP NAV -->
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navMenu">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="programs.html"
+                            aria-current="page">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="d-none d-lg-flex align-items-center search-wrap">
+                <label for="site-search" class="visually-hidden">Search programs</label>
+                <i class="bi bi-search search-icon" aria-hidden="true"></i>
+                <input class="search" id="site-search" type="text" placeholder="Search programs..."
+                    aria-label="Search programs">
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-label="Navigation menu">
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation menu">
+            <span class="bi bi-x" aria-hidden="true"></span>
+        </button>
+        <nav class="mobile-menu-panel" aria-label="Mobile navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html" aria-current="page">Programs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main id="main-content">
+
+        <!-- ================= PAGE HERO ================= -->
+        <section class="page-hero-section" aria-label="Facilities hero">
+            <div class="container-xl py-4 py-lg-5">
+                <div class="page-hero-card animate__animated animate__fadeIn">
+                    <nav aria-label="Breadcrumb" class="mb-3">
+                        <ol class="breadcrumb page-breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">HOME</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">FACILITIES</li>
+                        </ol>
+                    </nav>
+                    <div class="d-flex align-items-start justify-content-between flex-wrap gap-3">
+                        <div>
+                            <h1 class="page-hero-title animate__animated animate__fadeInUp">Explore Our<br>Facilities
+                            </h1>
+                            <p class="page-hero-desc animate__animated animate__fadeInUp animate__delay-1s">From our
+                                olympic-sized pools to our indoor ice rink, discover all the spaces<br
+                                    class="d-none d-md-block"> we've designed to help you stay active, healthy, and
+                                connected.</p>
+                        </div>
+                        <a href="#"
+                            class="btn btn-page-hero animate__animated animate__fadeInRight animate__delay-1s">View
+                            Schedule</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FILTER TABS ================= -->
+        <section class="facilities-section" aria-labelledby="facilities-heading">
+            <div class="container-xl pt-4 pb-5">
+
+                <!-- Filter pills -->
+                <div class="filter-pills mb-4" role="group" aria-label="Filter facilities by category">
+                    <button class="filter-pill active" data-filter="all">All Facilities</button>
+                    <button class="filter-pill" data-filter="winter">Winter Sports</button>
+                    <button class="filter-pill" data-filter="aquatics">Aquatics</button>
+                    <button class="filter-pill" data-filter="fitness">Fitness</button>
+                    <button class="filter-pill" data-filter="mind-body">Mind &amp; Body</button>
+                    <button class="filter-pill" data-filter="recreation">Recreation Courts</button>
+                </div>
+
+                <!-- Facilities grid — 3 columns desktop, 1 mobile -->
+                <div class="row g-3" id="facilities-grid" aria-label="Facilities">
+
+                    <!-- Indoor Ice Rink -->
+                    <div class="col-lg-4 col-md-6 facility-item animate__animated animate__fadeInUp"
+                        data-category="winter">
+                        <article class="facility-card">
+                            <div class="facility-img-wrap">
+                                <picture>
+                                    <source media="(max-width: 575px)"
+                                        srcset="images/woman-posing-against-indoor-rink-small.jpg">
+                                    <img src="images/woman-posing-against-indoor-rink-large.jpg"
+                                        alt="People skating on an indoor ice rink" class="facility-img">
+                                </picture>
+                                <span class="facility-badge facility-badge--winter">Winter Sports</span>
+                                <span class="facility-status"><i class="bi bi-clock" aria-hidden="true"></i> Open until
+                                    9 PM</span>
+                            </div>
+                            <div class="facility-body">
+                                <h2 class="facility-title">Indoor Ice Rink</h2>
+                                <p class="facility-desc">Enjoy year-round public skating, figure skating lessons, and
+                                    recreational hockey leagues on our regulation-sized ice rink.</p>
+                                <a href="#" class="explore-link">EXPLORE FACILITY <i class="bi bi-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Olympic Pool -->
+                    <div class="col-lg-4 col-md-6 facility-item animate__animated animate__fadeInUp"
+                        data-category="aquatics" style="animation-delay:.1s">
+                        <article class="facility-card">
+                            <div class="facility-img-wrap">
+                                <picture>
+                                    <source media="(max-width: 575px)" srcset="images/indoor-swimming-pool-small.jpg">
+                                    <img src="images/indoor-swimming-pool-large.jpg"
+                                        alt="Olympic-sized indoor swimming pool" class="facility-img">
+                                </picture>
+                                <span class="facility-badge facility-badge--aquatics">Aquatics</span>
+                                <span class="facility-status"><i class="bi bi-clock" aria-hidden="true"></i> Open until
+                                    10 PM</span>
+                            </div>
+                            <div class="facility-body">
+                                <h2 class="facility-title">Olympic Pool</h2>
+                                <p class="facility-desc">Improve your cardiovascular health in our Olympic-sized heated
+                                    indoor swimming pool. Includes diving boards and lap lanes.</p>
+                                <a href="#" class="explore-link">EXPLORE FACILITY <i class="bi bi-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Advanced Fitness Center -->
+                    <div class="col-lg-4 col-md-6 facility-item animate__animated animate__fadeInUp"
+                        data-category="fitness" style="animation-delay:.2s">
+                        <article class="facility-card">
+                            <div class="facility-img-wrap">
+                                <picture>
+                                    <source media="(max-width: 575px)"
+                                        srcset="images/intensity-hit-class-4-people-small.jpg">
+                                    <img src="images/intensity-hit-class-4-people-large.jpg"
+                                        alt="Modern fitness center with weight training equipment" class="facility-img">
+                                </picture>
+                                <span class="facility-badge facility-badge--fitness">Fitness</span>
+                                <span class="facility-status"><i class="bi bi-clock" aria-hidden="true"></i> Open until
+                                    10 PM</span>
+                            </div>
+                            <div class="facility-body">
+                                <h2 class="facility-title">Advanced Fitness Center</h2>
+                                <p class="facility-desc">Push your limits with our state-of-the-art cardio and weight
+                                    training equipment. Personal trainers available on request.</p>
+                                <a href="#" class="explore-link">EXPLORE FACILITY <i class="bi bi-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Championship Courts -->
+                    <div class="col-lg-4 col-md-6 facility-item animate__animated animate__fadeInUp"
+                        data-category="recreation" style="animation-delay:.1s">
+                        <article class="facility-card">
+                            <div class="facility-img-wrap">
+                                <picture>
+                                    <source media="(max-width: 575px)"
+                                        srcset="images/basket-ball-court-closeup-of-ball-small.jpg">
+                                    <img src="images/basket-ball-court-closeup-of-ball-large.jpg"
+                                        alt="Championship hardwood basketball court" class="facility-img">
+                                </picture>
+                                <span class="facility-badge facility-badge--recreation">Recreation</span>
+                                <span class="facility-status"><i class="bi bi-clock" aria-hidden="true"></i> Open until
+                                    9 PM</span>
+                            </div>
+                            <div class="facility-body">
+                                <h2 class="facility-title">Championship Courts</h2>
+                                <p class="facility-desc">Three full-sized hardwood courts available for basketball,
+                                    volleyball, and badminton. Join our leagues or drop-in games.</p>
+                                <a href="#" class="explore-link">EXPLORE FACILITY <i class="bi bi-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Tranquility Studios -->
+                    <div class="col-lg-4 col-md-6 facility-item animate__animated animate__fadeInUp"
+                        data-category="mind-body" style="animation-delay:.2s">
+                        <article class="facility-card">
+                            <div class="facility-img-wrap">
+                                <picture>
+                                    <source media="(max-width: 575px)"
+                                        srcset="images/practicing-yoga-in-studio-small.jpg">
+                                    <img src="images/practicing-yoga-in-studio-large.jpg"
+                                        alt="Serene yoga studio with bamboo floors" class="facility-img">
+                                </picture>
+                                <span class="facility-badge facility-badge--mind-body">Mind &amp; Body</span>
+                                <span class="facility-status facility-status--schedule"><i class="bi bi-calendar3"
+                                        aria-hidden="true"></i> Check Schedule</span>
+                            </div>
+                            <div class="facility-body">
+                                <h2 class="facility-title">Tranquility Studios</h2>
+                                <p class="facility-desc">Two dedicated studios with sprung bamboo floors and ambient
+                                    lighting for yoga, pilates, and meditation classes.</p>
+                                <a href="contact.html" class="explore-link">EXPLORE FACILITY <i
+                                        class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Vertical Ascent Wall -->
+                    <div class="col-lg-4 col-md-6 facility-item animate__animated animate__fadeInUp"
+                        data-category="recreation" style="animation-delay:.3s">
+                        <article class="facility-card">
+                            <div class="facility-img-wrap">
+                                <picture>
+                                    <source media="(max-width: 575px)"
+                                        srcset="images/woman-climbing-rock-climbing-wall-small.jpg">
+                                    <img src="images/woman-climbing-rock-climbing-wall-large.jpg"
+                                        alt="Woman climbing colorful indoor climbing wall" class="facility-img">
+                                </picture>
+                                <span class="facility-badge facility-badge--recreation">Recreation</span>
+                                <span class="facility-status"><i class="bi bi-clock" aria-hidden="true"></i> Open until
+                                    8 PM</span>
+                            </div>
+                            <div class="facility-body">
+                                <h2 class="facility-title">Vertical Ascent Wall</h2>
+                                <p class="facility-desc">Challenge yourself on our 40-foot indoor climbing and
+                                    bouldering wall. Auto-belays and safety gear rentals available.</p>
+                                <a href="#" class="explore-link">EXPLORE FACILITY <i class="bi bi-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GUIDED TOUR CTA ================= -->
+        <section class="cta-section" aria-label="Guided tour call to action">
+            <div class="container-xl py-4 py-lg-5">
+                <div class="cta-card cta-card--yellow">
+                    <div class="cta-text">
+                        <h2>Take a Guided Tour</h2>
+                        <p>Want to see the facilities in person? Book a free guided tour with our staff and experience
+                            the Active Life Centre difference.</p>
+                    </div>
+                    <a href="contact.html" class="btn btn-cta-tour"><i class="bi bi-calendar-check me-2"
+                            aria-hidden="true"></i>Book a Tour</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container-xl py-5">
+
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-lightning-fill footer-logo-icon" aria-hidden="true"></i>
+                        <span class="footer-logo-text">Active Life</span>
+                    </div>
+                    <p class="footer-desc">Supporting our community's health and wellness since 1995. Your journey to a
+                        better life starts here.</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-heading">QUICK LINKS</h3>
+                    <ul class="footer-links" aria-label="Quick links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Facilities</a></li>
+                        <li><a href="#">Membership Plans</a></li>
+                        <li><a href="#">Trainer Profiles</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-heading">CONTACT US</h3>
+                    <ul class="footer-links" aria-label="Contact information">
+                        <li><i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>123 Wellness
+                            Blvd,<br>&nbsp;&nbsp;&nbsp;&nbsp;Health City, HC 56789</li>
+                        <li><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i><a href="tel:5551234567">(555)
+                                123-4567</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-heading">STAY UPDATED</h3>
+                    <p class="footer-desc mb-3">Subscribe for health tips and program updates.</p>
+                    <div class="footer-newsletter" role="form" aria-label="Newsletter signup">
+                        <label for="footer-email" class="visually-hidden">Your email address</label>
+                        <input type="email" id="footer-email" class="newsletter-input" placeholder="Your email"
+                            aria-label="Email address for newsletter">
+                        <button class="btn btn-newsletter" aria-label="Subscribe to newsletter">Join</button>
+                    </div>
+                    <div class="social-icons mt-4" aria-label="Social media links">
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-icon" aria-label="X (Twitter)"><i class="bi bi-twitter-x"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="footer-hr">
+
+            <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <p class="mb-0">© 2024 Active Life Centre. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Mobile menu open/close
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        function openMenu() {
+            mobileOverlay.classList.add('open');
+            mobileOverlay.setAttribute('aria-hidden', 'false');
+            mobileCloseBtn.focus();
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            mobileOverlay.classList.remove('open');
+            mobileOverlay.setAttribute('aria-hidden', 'true');
+            mobileMenuBtn.focus();
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMenu);
+        mobileCloseBtn.addEventListener('click', closeMenu);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileOverlay.classList.contains('open')) closeMenu();
+        });
+
+        mobileOverlay.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+
+        // Filter pills
+        const filterPills = document.querySelectorAll('.filter-pill');
+        const facilityItems = document.querySelectorAll('.facility-item');
+
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                // Update active state
+                filterPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+
+                const filter = pill.dataset.filter;
+
+                facilityItems.forEach(item => {
+                    const category = item.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 
