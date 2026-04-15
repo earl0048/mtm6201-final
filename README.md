@@ -9,7 +9,7 @@ Created by Ashlee Earle.
 This project is a fully responsive website developed to replicate a high-fidelity Figma design created in a previous course. The website represents a fictional activity and community centre and focuses on delivering a clean, engaging, and user-friendly experience across desktop, tablet, and mobile devices.
 
 The original design process included:
-- User and stakeholder research (community members, staff, vendors)
+- User and stakeholder research such as community members, staff, vendors etc.
 - Persona creation
 - Competitive and feature research
 - Mood board and style tile development
@@ -49,7 +49,7 @@ Through this project, I gained a deeper understanding of:
 - Debugging layout issues and working through responsive challenges
 - Structuring a project from concept to final implementation
 
-I also learned that design is not always final—development is an opportunity to refine and improve the user experience beyond the original concept.
+I also learned that design is not always final, development is an opportunity to refine and improve the user experience beyond the original concept.
 
 ## Future Improvements
 
